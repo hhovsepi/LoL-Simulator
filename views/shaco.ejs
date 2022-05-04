@@ -135,20 +135,31 @@
                 alt="Snow" style="width:100%">
         </div>
         <div class="column-fullheight">
-            <div class="profile-card">
+            <div class="profile-card" style="margin-top: 5%;">
                 <p>
                 <h2>
                     The Playful Trickster!
                 </h2>
                 <!--align the text to the left-->
-                <p style="margin-top: 20px; text-align: left;"><b style="font-size: large;">LORE: </b>
-                    Shaco is a devious, conniving, and highly cunning assassin from ancient Ionia, who uses trickery and
-                    shadows to exact revenge on those who wronged him.
-                </p>    
-
+                <p style="margin-top: 20px; text-align: center;">
+                    <!-- <b style="font-size: large;">LORE: </b> -->
+                    Crafted long ago as a plaything for a lonely prince, the enchanted marionette Shaco now delights in
+                    murder and mayhem.
+                    Corrupted by dark magic and the loss of his beloved charge, the once-kind puppet finds pleasure only
+                    in the misery of the poor souls he torments.
+                    He uses toys and simple tricks to deadly effect, finding the results of his bloody “games”
+                    hilarious—and for those who hear a dark chuckle in the dead of night, the Demon Jester may have
+                    marked them as his next plaything.
+                </p>
+                <h3 style="margin-top: 3%; text-align: center;">
+                    Build your story!
+                </h3>
+                <!-- insert a text box and a button that says make your story-->
+                <input class="inputBox"type="text" name="story" placeholder="What is your name?"style="margin-top: 5%;">
+                <a href="/shaco/story" class="button1">Make your story</a>                
                 </p>
             </div>
-            
+
         </div>
 
         <style>
@@ -189,6 +200,8 @@
                 position: relative;
                 box-sizing: border-box;
                 max-height: 50%;
+                margin-left: 4%;
+                margin-top: 2%;
                 /*make the image float on hover*/
                 /* background-color: #000;
             background-size: 1px; */
@@ -225,6 +238,49 @@
             img.hoverImages:hover {
                 cursor: pointer;
                 margin-top: -1px;
+            }
+
+            input.inputBox{
+                display: inline-block;
+                padding: 0.35em 1.2em;
+                border: 0.1em solid #FFFFFF;
+                margin: 0 0.3em 0.3em 0;
+                border-radius: 0.12em;
+                box-sizing: border-box;
+                text-decoration: none;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                color: #FFFFFF;
+                text-align: center;
+                transition: all 0.2s;
+                color:#000;
+            }
+
+            a.button1 {
+                display: inline-block;
+                padding: 0.35em 1.2em;
+                border: 0.1em solid #FFFFFF;
+                margin: 0 0.3em 0.3em 0;
+                border-radius: 0.12em;
+                box-sizing: border-box;
+                text-decoration: none;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                color: #FFFFFF;
+                text-align: center;
+                transition: all 0.2s;
+            }
+
+            a.button1:hover {
+                color: #000000;
+                background-color: #FFFFFF;
+            }
+
+            @media all and (max-width:30em) {
+                a.button1 {
+                    display: block;
+                    margin: 0.4em auto;
+                }
             }
 
             /* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
