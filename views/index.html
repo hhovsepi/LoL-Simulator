@@ -1,0 +1,218 @@
+<!-- inserting some standard boiler plate html to get started -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>League of Legends</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">Champions</a>
+        <a href="#contact">Lore</a>
+        <a href="#about">About</a>
+    </div>
+    <style>
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: darkcyan;
+            color: white;
+        }
+    </style>
+    <div class="container">
+        <img src="https://www.leagueoflegends.com/static/open-graph-2e582ae9fae8b0b396ca46ff21fd47a8.jpg" alt="Snow"
+            style="width:100%; filter: opacity(50%); height: 400px;">
+        <div class="centered">
+            <h1>Where League of Legends fans come to hear stories!</h1>
+        </div>
+    </div>
+    <style>
+        .container {
+            position: relative;
+            text-align: center;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: drop-shadow(0px 0px 10px black);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .bottom-left {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+        }
+
+        .bottom-right {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+        }
+
+        .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            filter: drop-shadow(0px 0px 5px #03192C);
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .column {
+            float: left;
+            width: 32%;
+            padding: 5px;
+            margin-left: center;
+            margin-right: center;
+            margin-top: center;
+            margin-bottom: center;
+
+
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+    <div class="row">
+        <div class="column">
+            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shaco_23.jpg" alt="Snow"
+                style="width:100%">
+        </div>
+        <div class="column">
+            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Udyr_0.jpg" alt="Forest"
+                style="width:100%">
+        </div>
+        <div class="column">
+            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg" alt="Mountains"
+                style="width:100%">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="https://cdn1.dotesports.com/wp-content/uploads/2018/12/05114842/kayn-odyssey.jpg" alt="Snow"
+                style="width:100%">
+        </div>
+        <div class="column">
+            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_0.jpg" alt="Forest"
+                style="width:100%">
+        </div>
+        <div class="column">
+            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kalista_0.jpg" alt="Mountains"
+                style="width:100%">
+        </div>
+    </div>
+    <!-- make the height of all the above images the same-->
+    <style>
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-height: 50%;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+            flex: 10%;
+            max-width: 33%;
+            padding: 5px;
+            max-height: 50%;
+        }
+
+        /* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 500px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+    ​<div id="footer">
+        <div id="footerContainer">
+            <div id="imginthefooter"></div>
+        </div>
+    </div>
+
+    <style>
+        ​​​​​​​​​ #footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 200px;
+            ;
+
+        }
+
+        #footerContainer {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background-color: #03192C;
+        }
+
+        #imginthefooter {
+            background: url('https://media-exp1.licdn.com/dms/image/C5603AQHS-sbQVRxtiQ/profile-displayphoto-shrink_200_200/0/1619722538381?e=1657152000&v=beta&t=fN87-IXh2qB5shTEfjmuMBHsaH-E4Qw7Sqxv4MhpnDw') no-repeat;
+            position: relative;
+            width: auto;
+            height: 300px;
+            position: bottom;
+        }
+    </style>
+
+
+
+
+    <script src="" async defer></script>
+</body>
+
+</html>
