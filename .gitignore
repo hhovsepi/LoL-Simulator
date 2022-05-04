@@ -1,0 +1,5 @@
+# ignore airtable api key and base ID
+passkeys.js
+
+# ignore node_modules
+node_modules

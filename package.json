@@ -1,0 +1,27 @@
+{
+  "name": "lol-simulator",
+  "version": "1.0.0",
+  "description": "A passion project by Haig Hovsepian that tells a story about League of Legends.",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hhovsepi/LoL-Simulator.git"
+  },
+  "author": "Haig Hovsepian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hhovsepi/LoL-Simulator/issues"
+  },
+  "homepage": "https://github.com/hhovsepi/LoL-Simulator#readme",
+  "dependencies": {
+    "airtable": "^0.11.3",
+    "ejs": "^3.1.7",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
