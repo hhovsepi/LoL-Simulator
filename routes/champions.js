@@ -2,7 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.send("Champion Database");
+    res.render('champions', { text: 'League of Legends Simulator' });
+   })
+   router.get('/shaco', (req, res) => {
+    res.render('shaco', { text: 'League of Legends Simulator' });
    })
 
 router.get('/:champion', (req, res) => {
