@@ -127,39 +127,111 @@
     </style>
     </style>
     <div class="row">
+        <div class="profile-card">
+            <!-- dont let profile-card grow upwards as it gets longer in text-->
+            <p>
+            <h2>
+                The Playful Trickster!
+            </h2>
+            <!--align the text to the left-->
+            <p style="margin-top: 20px; text-align: center; font-size: 20px; font-weight: 100;" class="story">
+                <!-- <b style="font-size: large;">LORE: </b> -->
+                Crafted long ago as a plaything for a lonely prince, the enchanted marionette Shaco now delights in
+                murder and mayhem.
+                Corrupted by dark magic and the loss of his beloved charge, the once-kind puppet finds pleasure only
+                in the misery of the poor souls he torments.
+                He uses toys and simple tricks to deadly effect, finding the results of his bloody “games”
+                hilarious—and for those who hear a dark chuckle in the dead of night, the Demon Jester may have
+                marked them as his next plaything.
+            </p>
+            <h3 style="margin-top: 8%; text-align: center; font-size: 25px;filter:drop-shadow(5);"id="buildStory">
+                Build your story!
+            </h3>
+            <!-- insert a text box and a button that says make your story-->
+            <input class="inputBox" type="text" name="story" placeholder="What is your name?" style="margin-top: 5%;"
+                required="required"id="inputHider">
+            <a class="button1" font-size="25"id="disableMe">Away we go!</a>
+            <!-- disable button1 after it is clicked-->
+
+            <!-- make an api call when the button is pressed, use the input as query for the api call-->
+            <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script>
+                // make an api call when the button is pressed, use the input as query for the api call
+                $(".button1").click(function () {
+                    const btn = document.getElementById('disableMe');
+                    btn.style.display = 'none';
+                    const input = document.getElementById('inputHider');
+                    input.style.display = 'none';
+                    const story = document.getElementById('buildStory');
+                    story.style.display = 'none';
+                    var name = $(".inputBox").val();
+                    console.log(name);
+                    if (name.length = 0 || name === undefined || name === null || name === "") {
+                        alert("Please enter a name");
+                    } else {
+                        console.log(name);
+                        $(".story").append('<br><br>');
+                        var i = 0;
+                        var txt = `${name} had always been alone. He was born into a wealthy family, but his parents never had time for him. His only friends were the toys his parents bought him to keep him quiet. He loved his toys, and he loved playing with them. 
+But he always felt like something was missing. One day, his parents brought him a new toy. 
+It was a marionette, and it was the most beautiful thing ${name} had ever seen. He named the marionette Shaco, and he loved it immediately.
+Shaco was the perfect friend: always happy, always willing to play. But one day, Shaco changed. 
+He became cruel and sadistic, delighting in the misery of others. ${name} was distraught, but he couldn’t bear to part with his friend. 
+So he kept Shaco close, even as the marionette’s darkness consumed him. 
+Now, ${name} is a puppet of Shaco’s, forced to do the demon jester’s bidding. 
+He has lost everything, but he still clings to the hope that one day he will be reunited with his beloved friend.`; /* The text */
+                        var speed = 1; /* The speed/duration of the effect in milliseconds */
+                        // make the color of the text change
+                        function typeWriter() {
+                            if (i < txt.length) {
+                                // make the color of the text change
+                                $(".story").append(txt.charAt(i));
+                                i++;
+                                setTimeout(typeWriter, speed);
+                            }
+                        }
+                        function endingText () {
+                            $(".story").append('<br><br>');
+                            $(".story").append('<b>This story was generated with GPT3!</b>');
+                        }
+                        typeWriter();
+                        setTimeout(endingText, 5000);
+                    }
+                });
+
+                /*
+                $.ajax({
+                        url: "https://api.openai.com/v1/engines/text-curie-001/completions",
+                        headers: {
+                            "content-type": "application/json",
+                            "Authorization" : "Bearer",
+                        },
+                        type: "POST",
+                        data: {
+                            "prompt": "Based on lore, a human's name, and a League of Legends champion name, generate a story that incorporates all three. The story should maintain the theme of the lore. Make the tone of the story playful.\n\nLore: Crafted long ago as a plaything for a lonely prince, the enchanted marionette Shaco now delights in mayhem. Corrupted by dark magic and the loss of his beloved charge, the once-kind puppet finds pleasure only in the misery of the poor souls he torments. He uses toys and simple tricks to deadly effect, finding the results of his bloody “games” hilarious—and for those who hear a dark chuckle in the dead of night, the Demon Jester may have marked them as his next plaything.\n\nChampion: Shaco\n\nName:\n\nStory:",
+                            "temperature": 0.7,
+                            "max_tokens": 800,
+                            "top_p": 1,
+                            "frequency_penalty": 0,
+                            "presence_penalty": 0
+                        },
+                        success: function (data) {
+                            console.log(data);
+                            // append the data to story div but after a new line and a space
+                        }
+                        */
+                            // $(".story").append(`<br><br>${name}, you should ` + data.activity);
+            </script>
+            </p>
+
+        </div>
+
         <div class="column">
             <div class="overlay">
                 Shaco
             </div>
             <img class="hoverImages" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shaco_23.jpg"
                 alt="Snow" style="width:100%">
-        </div>
-        <div class="column-fullheight">
-            <div class="profile-card" style="margin-top: 5%;">
-                <p>
-                <h2>
-                    The Playful Trickster!
-                </h2>
-                <!--align the text to the left-->
-                <p style="margin-top: 20px; text-align: center;">
-                    <!-- <b style="font-size: large;">LORE: </b> -->
-                    Crafted long ago as a plaything for a lonely prince, the enchanted marionette Shaco now delights in
-                    murder and mayhem.
-                    Corrupted by dark magic and the loss of his beloved charge, the once-kind puppet finds pleasure only
-                    in the misery of the poor souls he torments.
-                    He uses toys and simple tricks to deadly effect, finding the results of his bloody “games”
-                    hilarious—and for those who hear a dark chuckle in the dead of night, the Demon Jester may have
-                    marked them as his next plaything.
-                </p>
-                <h3 style="margin-top: 3%; text-align: center;">
-                    Build your story!
-                </h3>
-                <!-- insert a text box and a button that says make your story-->
-                <input class="inputBox"type="text" name="story" placeholder="What is your name?"style="margin-top: 5%;">
-                <a href="/shaco/story" class="button1">Make your story</a>                
-                </p>
-            </div>
-
         </div>
 
         <style>
@@ -172,13 +244,12 @@
             }
 
             .profile-card {
+                margin-top: 2%;
                 position: absolute;
                 text-align: center;
                 color: #FFF;
-                left: 65%;
-                top: 30%;
+                left: 45%;
                 width: 50%;
-                transform: translate(-50%, -50%);
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 padding: 10px;
                 filter: drop-shadow(0px 0px 5px #03192C);
@@ -195,7 +266,7 @@
 
             .column {
                 float: left;
-                width: 33%;
+                width: 38%;
                 padding: 10px;
                 position: relative;
                 box-sizing: border-box;
@@ -240,7 +311,7 @@
                 margin-top: -1px;
             }
 
-            input.inputBox{
+            input.inputBox {
                 display: inline-block;
                 padding: 0.35em 1.2em;
                 border: 0.1em solid #FFFFFF;
@@ -250,10 +321,11 @@
                 text-decoration: none;
                 font-family: 'Roboto', sans-serif;
                 font-weight: 300;
+                font-size: 20px;
                 color: #FFFFFF;
                 text-align: center;
                 transition: all 0.2s;
-                color:#000;
+                color: #000;
             }
 
             a.button1 {
@@ -266,12 +338,14 @@
                 text-decoration: none;
                 font-family: 'Roboto', sans-serif;
                 font-weight: 300;
+                font-size: 20px;
                 color: #FFFFFF;
                 text-align: center;
                 transition: all 0.2s;
             }
 
             a.button1:hover {
+                cursor: pointer;
                 color: #000000;
                 background-color: #FFFFFF;
             }
@@ -308,7 +382,7 @@
     </svg> -->
 
 
-        <svg viewbox="" width="100%">
+        <svg width="100%">
             <defs>
                 <clipPath id="wave" clipPathUnits="objectBoundingBox" transform="scale(0.00069444444, 0.00304878048)">
                     <path

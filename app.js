@@ -1,6 +1,7 @@
 // write hello world to localhost:3000/
 
 let express = require('express');
+let fetch = require('node-fetch');
 const app = express()
 const port = 3000
 
