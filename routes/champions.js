@@ -7,6 +7,9 @@ router.get('/', (req, res) => {
    router.get('/shaco', (req, res) => {
     res.render('shaco', { text: 'League of Legends Simulator' });
    })
+   router.get('/udyr', (req, res) => {
+    res.render('udyr', { text: 'League of Legends Simulator' });
+   })
 
 router.get('/:champion', (req, res) => {
     res.send(`Champion: ${req.params.champion}`);
