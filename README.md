@@ -1,7 +1,33 @@
-# LoL Simulator
- A passion project based on my favorite and very popular mmo game League of Legends. This project will display routes for every champion in the game and I plan on using AI to generate alternative champion back stories based on the original lore that I get from the Riot Games League of Legends API.
- 
- 
+# League of Legends Story Teller
+## [Link to Deployed Application](https://lol-story-teller.herokuapp.com//)
+
+## Put Yourself In Your Favorite Champions Story
+
+`League of Legends Story Teller` is based on the popular MMO strategy game League of Legends. The app combines AI with existing champion backstories to craft personalized stories for the user.
+
+This is a full-stack web-based application built upon the `Node.js` environment, relies on `Express` for functionality, and utilizes `GPT-3` as the source for AI generated short stories.
+
+The application's user interface is built upon `React`.
+<br><br>
+
+## Demo of the Story Teller:
 ![Screen Recording 2022-05-05 at 8 44 59 PM](https://user-images.githubusercontent.com/81712518/167064255-2a7bd2f7-ab78-42c4-8498-fa1bd4a65d30.gif)
-![image](https://user-images.githubusercontent.com/81712518/166838501-e810b990-26c3-47c2-a89f-c4e47e19a39d.png)
-![image](https://user-images.githubusercontent.com/81712518/166838551-8fa131b5-2833-4bb3-86c9-2cc007387324.png)
+
+<br>
+
+# Technologies Used
+
+######
+| Technology | Description |
+| --------------- | --------- |
+| [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | Structure of Web Page |
+| [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) | Styling of HTML |
+| [JavaScript](https://www.javascript.com/) | Powers the dynamic behavior of web app |
+| [React](https://reactjs.org/) | JavaScript library for building User Interface |
+| [Node.js](https://handlebarsjs.com/) | JS run-time environment that executes JS code outside of a browser |
+######
+
+
+# Authors
+* Haig (Hike) Alex Hovsepian
+
