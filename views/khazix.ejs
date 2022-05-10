@@ -46,10 +46,7 @@
         <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec6b653d-20ae-41d7-8e78-5a2ec054db72/d7nzyi4-717deda0-3474-46d1-83d5-4f064cd966ad.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VjNmI2NTNkLTIwYWUtNDFkNy04ZTc4LTVhMmVjMDU0ZGI3MlwvZDduenlpNC03MTdkZWRhMC0zNDc0LTQ2ZDEtODNkNS00ZjA2NGNkOTY2YWQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.W39a-Uy9Isacf1cePghCwVuwqU3Qe2R44yLdJ3ZqWXw"
             alt="Snow" style="width:100%; filter: brightness(70%); height: 200px; color: #000;">
         <div class="centered">
-            <h1>Shaco</h1>
-        </div>
-        <div class="top-right">
-            <h1>Udyr</h1>
+            <h1>Kha'Zix</h1>
         </div>
     </div>
     <style>
@@ -131,17 +128,14 @@
         <div class="profile-card">
             <p>
             <h2>
-                The Playful Trickster!
+                The Voidreaver
             </h2>
             <p style="margin-top: 20px; text-align: center; font-size: 20px; font-weight: 100;" class="story">
-                <!-- <b style="font-size: large;">LORE: </b> -->
-                Crafted long ago as a plaything for a lonely prince, the enchanted marionette Shaco now delights in
-                murder and mayhem.
-                Corrupted by dark magic and the loss of his beloved charge, the once-kind puppet finds pleasure only
-                in the misery of the poor souls he torments.
-                He uses toys and simple tricks to deadly effect, finding the results of his bloody “games”
-                hilarious—and for those who hear a dark chuckle in the dead of night, the Demon Jester may have
-                marked them as his next plaything.
+                The Void grows, and the Void adapts—in none of its myriad spawn are these truths more apparent than Kha’Zix. 
+                Evolution drives the core of this mutating horror, born to survive and to slay the strong. 
+                Where it struggles to do so, it grows new, more effective ways to counter and kill its prey. 
+                Initially a mindless beast, Kha’Zix’s intelligence has developed as much as its form. 
+                Now, the creature plans out its hunts, and even utilizes the visceral terror it engenders in its victims..
             </p>
             <h3 style="margin-top: 8%; text-align: center; font-size: 25px;filter:drop-shadow(5);" id="buildStory">
                 Build your story!
@@ -159,22 +153,21 @@
                     const story = document.getElementById('buildStory');
                     story.style.display = 'none';
                     var name = $(".inputBox").val();
-                    console.log(name);
+                    
                     if (name.length = 0 || name === undefined || name === null || name === "") {
                         alert("Please enter a name");
                     } else {
-                        console.log(name);
+                        
                         $(".story").append('<br><br>');
                         var i = 0;
-                        var txt = `${name} had always been alone. He was born into a wealthy family, but his parents never had time for him. His only friends were the toys his parents bought him to keep him quiet. He loved his toys, and he loved playing with them. 
-But he always felt like something was missing. One day, his parents brought him a new toy. 
-It was a marionette, and it was the most beautiful thing ${name} had ever seen. He named the marionette Shaco, and he loved it immediately.
-Shaco was the perfect friend: always happy, always willing to play. But one day, Shaco changed. 
-He became cruel and sadistic, delighting in the misery of others. ${name} was distraught, but he couldn’t bear to part with his friend. 
-So he kept Shaco close, even as the marionette’s darkness consumed him. 
-Now, ${name} is a puppet of Shaco’s, forced to do the demon jester’s bidding. 
-He has lost everything, but he still clings to the hope that one day he will be reunited with his beloved friend.`; /* The text */
-                        var speed = 1;
+                        var txt = `${name} had always been fascinated by the Void. As a child, he would spend hours staring up at the night sky, wondering what lay beyond the stars. When he grew older, he began to read about the creatures that supposedly lived there, and he became especially interested in one of them: Kha'Zix. He followed every bit of news and lore he could find on the creature, and dreamed of one day meeting it.
+
+And then, one day, his dream came true. ${name} was out on a hike in the woods when he suddenly came across a creature that he knew could only be Kha'Zix. He was terrified, but also excited, and he couldn't help but approach the creature.
+
+Kha'Zix was fascinated by ${name}, and ${name} by Kha'Zix. They talked for hours, about the Void and all the creatures that lived there. ${name} even got to see Kha'Zix hunt, and he was amazed by the creature's intelligence and brutality.
+
+Eventually, ${name} had to go home, but he knew that he would never forget his encounter with Kha'Zix. He had finally found the answers to the questions that had been plaguing him for so long, and he had made a friend in the process.`; /* The text */
+                        var speed = 1; /* The speed/duration of the effect in milliseconds */
                         function typeWriter() {
                             if (i < txt.length) {
                                 $(".story").append(txt.charAt(i));
@@ -185,12 +178,15 @@ He has lost everything, but he still clings to the hope that one day he will be 
                         function endingText() {
                             $(".story").append('<br><br>');
                             $(".story").append('<b>This story was generated with GPT3!</b>');
+                        }
+                        function endingTextTwo() {
                             $(".story").append('<br><br><br>');
-                            $(".story").append('<a class="button1" font-size="25" id="enableMe"href="/champions/udyr">Make your story with Udyr, The Spirit Animal ➤</a>');
+                            $(".story").append('<a class="button1" font-size="25" id="enableMe"href="/champions/kalista">Make your story with Kalista, The Spear of Vengence ➤</a>');
                         }
 
                         typeWriter();
-                        setTimeout(endingText, 5000);
+                        setTimeout(endingText, 7000);
+                        setTimeout(endingTextTwo, 9000);
                     }
                 });
             </script>
@@ -200,9 +196,9 @@ He has lost everything, but he still clings to the hope that one day he will be 
 
         <div class="column">
             <div class="overlay">
-                Shaco
+                Kha'Zix
             </div>
-            <img class="hoverImages" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shaco_23.jpg"
+            <img class="hoverImages" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_0.jpg"
                 alt="Snow" style="width:100%">
         </div>
 

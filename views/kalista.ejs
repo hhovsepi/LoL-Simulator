@@ -46,10 +46,7 @@
         <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec6b653d-20ae-41d7-8e78-5a2ec054db72/d7nzyi4-717deda0-3474-46d1-83d5-4f064cd966ad.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VjNmI2NTNkLTIwYWUtNDFkNy04ZTc4LTVhMmVjMDU0ZGI3MlwvZDduenlpNC03MTdkZWRhMC0zNDc0LTQ2ZDEtODNkNS00ZjA2NGNkOTY2YWQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.W39a-Uy9Isacf1cePghCwVuwqU3Qe2R44yLdJ3ZqWXw"
             alt="Snow" style="width:100%; filter: brightness(70%); height: 200px; color: #000;">
         <div class="centered">
-            <h1>Shaco</h1>
-        </div>
-        <div class="top-right">
-            <h1>Udyr</h1>
+            <h1>Kalista</h1>
         </div>
     </div>
     <style>
@@ -129,28 +126,32 @@
     </style>
     <div class="row">
         <div class="profile-card">
+            <!-- dont let profile-card grow upwards as it gets longer in text-->
             <p>
             <h2>
-                The Playful Trickster!
+                The Spear of Vengence
             </h2>
+            <!--align the text to the left-->
             <p style="margin-top: 20px; text-align: center; font-size: 20px; font-weight: 100;" class="story">
                 <!-- <b style="font-size: large;">LORE: </b> -->
-                Crafted long ago as a plaything for a lonely prince, the enchanted marionette Shaco now delights in
-                murder and mayhem.
-                Corrupted by dark magic and the loss of his beloved charge, the once-kind puppet finds pleasure only
-                in the misery of the poor souls he torments.
-                He uses toys and simple tricks to deadly effect, finding the results of his bloody “games”
-                hilarious—and for those who hear a dark chuckle in the dead of night, the Demon Jester may have
-                marked them as his next plaything.
+                An undying specter of wrath and retribution, Kalista is an armored nightmare summoned from the Shadow Isles to hunt deceivers and traitors. 
+                The betrayed may cry out in blood to be avenged, but Kalista only answers those willing to pay with their very souls. 
+                Those who become the focus of Kalista’s wrath should make their final peace, for any pact sealed with this grim hunter can only be ended by 
+                the cold, piercing fire of her soul-spears.
             </p>
             <h3 style="margin-top: 8%; text-align: center; font-size: 25px;filter:drop-shadow(5);" id="buildStory">
                 Build your story!
             </h3>
+            <!-- insert a text box and a button that says make your story-->
             <input class="inputBox" type="text" name="story" placeholder="What is your name?" style="margin-top: 5%;"
                 required="required" id="inputHider">
             <a class="button1" font-size="25" id="disableMe">Away we go!</a>
+            <!-- disable button1 after it is clicked-->
+
+            <!-- make an api call when the button is pressed, use the input as query for the api call-->
             <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
             <script>
+                // make an api call when the button is pressed, use the input as query for the api call
                 $(".button1").click(function () {
                     const btn = document.getElementById('disableMe');
                     btn.style.display = 'none';
@@ -166,17 +167,22 @@
                         console.log(name);
                         $(".story").append('<br><br>');
                         var i = 0;
-                        var txt = `${name} had always been alone. He was born into a wealthy family, but his parents never had time for him. His only friends were the toys his parents bought him to keep him quiet. He loved his toys, and he loved playing with them. 
-But he always felt like something was missing. One day, his parents brought him a new toy. 
-It was a marionette, and it was the most beautiful thing ${name} had ever seen. He named the marionette Shaco, and he loved it immediately.
-Shaco was the perfect friend: always happy, always willing to play. But one day, Shaco changed. 
-He became cruel and sadistic, delighting in the misery of others. ${name} was distraught, but he couldn’t bear to part with his friend. 
-So he kept Shaco close, even as the marionette’s darkness consumed him. 
-Now, ${name} is a puppet of Shaco’s, forced to do the demon jester’s bidding. 
-He has lost everything, but he still clings to the hope that one day he will be reunited with his beloved friend.`; /* The text */
-                        var speed = 1;
+                        var txt = `${name} had always been a bit of a loner. He was never really one for socializing, preferring to spend his time on his own. But that all changed when he met Kalista.
+
+Kalista was everything that ${name} was not. She was outgoing and vivacious, always looking for a good time. She was also incredibly brave, never afraid to stand up for what she believed in.
+
+${name} was immediately drawn to Kalista, and the two of them quickly became close friends. They would spend hours talking, and ${name} found himself opening up to her in ways he never had before.
+
+Then, one day, everything changed. ${name} learned that Kalista had been betrayed by someone she trusted. He was furious, and vowed to help her get revenge.
+
+Kalista was hesitant at first, but eventually she agreed. Together, they plotted and planned, until the day came to take their revenge.
+
+${name} will never forget that day. It was the day he finally stood up for himself, and for Kalista. It was the day he became a soul-spear, and ended the betrayer's reign`; /* The text */
+                        var speed = 1; /* The speed/duration of the effect in milliseconds */
+                        // make the color of the text change
                         function typeWriter() {
                             if (i < txt.length) {
+                                // make the color of the text change
                                 $(".story").append(txt.charAt(i));
                                 i++;
                                 setTimeout(typeWriter, speed);
@@ -185,12 +191,15 @@ He has lost everything, but he still clings to the hope that one day he will be 
                         function endingText() {
                             $(".story").append('<br><br>');
                             $(".story").append('<b>This story was generated with GPT3!</b>');
+                        }
+                        function endingTextTwo() {
                             $(".story").append('<br><br><br>');
-                            $(".story").append('<a class="button1" font-size="25" id="enableMe"href="/champions/udyr">Make your story with Udyr, The Spirit Animal ➤</a>');
+                            $(".story").append('<a class="button1" font-size="25" id="enableMe"href="/champions/shaco">Make your story with Shaco, The Playful Trickster ➤</a>');
                         }
 
                         typeWriter();
-                        setTimeout(endingText, 5000);
+                        setTimeout(endingText, 7000);
+                        setTimeout(endingTextTwo, 9000);
                     }
                 });
             </script>
@@ -200,9 +209,9 @@ He has lost everything, but he still clings to the hope that one day he will be 
 
         <div class="column">
             <div class="overlay">
-                Shaco
+                Kalista
             </div>
-            <img class="hoverImages" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shaco_23.jpg"
+            <img class="hoverImages" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kalista_0.jpg"
                 alt="Snow" style="width:100%">
         </div>
 
@@ -225,8 +234,8 @@ He has lost everything, but he still clings to the hope that one day he will be 
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 padding: 10px;
                 filter: drop-shadow(0px 0px 5px #03192C);
-                /* background-color: #03192C; */
             }
+
             .column {
                 float: left;
                 width: 38%;
@@ -316,8 +325,6 @@ He has lost everything, but he still clings to the hope that one day he will be 
                     margin: 0.4em auto;
                 }
             }
-
-            /* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
             @media screen and (max-width: 500px) {
                 .column {
                     flex: 100%;

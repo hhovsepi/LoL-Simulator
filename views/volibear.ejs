@@ -1,3 +1,5 @@
+<!-- inserting some standard boiler plate html to get started -->
+
 <!DOCTYPE html>
 <html>
 
@@ -46,10 +48,7 @@
         <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec6b653d-20ae-41d7-8e78-5a2ec054db72/d7nzyi4-717deda0-3474-46d1-83d5-4f064cd966ad.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VjNmI2NTNkLTIwYWUtNDFkNy04ZTc4LTVhMmVjMDU0ZGI3MlwvZDduenlpNC03MTdkZWRhMC0zNDc0LTQ2ZDEtODNkNS00ZjA2NGNkOTY2YWQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.W39a-Uy9Isacf1cePghCwVuwqU3Qe2R44yLdJ3ZqWXw"
             alt="Snow" style="width:100%; filter: brightness(70%); height: 200px; color: #000;">
         <div class="centered">
-            <h1>Shaco</h1>
-        </div>
-        <div class="top-right">
-            <h1>Udyr</h1>
+            <h1>Volibear</h1>
         </div>
     </div>
     <style>
@@ -129,28 +128,32 @@
     </style>
     <div class="row">
         <div class="profile-card">
+            <!-- dont let profile-card grow upwards as it gets longer in text-->
             <p>
             <h2>
-                The Playful Trickster!
+                The Relentless Storm
             </h2>
+            <!--align the text to the left-->
             <p style="margin-top: 20px; text-align: center; font-size: 20px; font-weight: 100;" class="story">
                 <!-- <b style="font-size: large;">LORE: </b> -->
-                Crafted long ago as a plaything for a lonely prince, the enchanted marionette Shaco now delights in
-                murder and mayhem.
-                Corrupted by dark magic and the loss of his beloved charge, the once-kind puppet finds pleasure only
-                in the misery of the poor souls he torments.
-                He uses toys and simple tricks to deadly effect, finding the results of his bloody “games”
-                hilarious—and for those who hear a dark chuckle in the dead of night, the Demon Jester may have
-                marked them as his next plaything.
+                o those who still revere him, the Volibear is the storm made manifest. Destructive, wild, and stubbornly resolute, 
+                he existed before mortals walked the Freljord’s tundra, and is fiercely protective of the lands that he and his demi-god kin created. 
+                Cultivating a deep hatred of civilization and the weakness it brought with it, he now fights to return to the old ways—when the 
+                land was untamed, and blood spilled freely—and eagerly battles all who oppose him, with tooth, claw, and thundering domination.
             </p>
             <h3 style="margin-top: 8%; text-align: center; font-size: 25px;filter:drop-shadow(5);" id="buildStory">
                 Build your story!
             </h3>
+            <!-- insert a text box and a button that says make your story-->
             <input class="inputBox" type="text" name="story" placeholder="What is your name?" style="margin-top: 5%;"
                 required="required" id="inputHider">
             <a class="button1" font-size="25" id="disableMe">Away we go!</a>
+            <!-- disable button1 after it is clicked-->
+
+            <!-- make an api call when the button is pressed, use the input as query for the api call-->
             <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
             <script>
+                // make an api call when the button is pressed, use the input as query for the api call
                 $(".button1").click(function () {
                     const btn = document.getElementById('disableMe');
                     btn.style.display = 'none';
@@ -166,17 +169,16 @@
                         console.log(name);
                         $(".story").append('<br><br>');
                         var i = 0;
-                        var txt = `${name} had always been alone. He was born into a wealthy family, but his parents never had time for him. His only friends were the toys his parents bought him to keep him quiet. He loved his toys, and he loved playing with them. 
-But he always felt like something was missing. One day, his parents brought him a new toy. 
-It was a marionette, and it was the most beautiful thing ${name} had ever seen. He named the marionette Shaco, and he loved it immediately.
-Shaco was the perfect friend: always happy, always willing to play. But one day, Shaco changed. 
-He became cruel and sadistic, delighting in the misery of others. ${name} was distraught, but he couldn’t bear to part with his friend. 
-So he kept Shaco close, even as the marionette’s darkness consumed him. 
-Now, ${name} is a puppet of Shaco’s, forced to do the demon jester’s bidding. 
-He has lost everything, but he still clings to the hope that one day he will be reunited with his beloved friend.`; /* The text */
-                        var speed = 1;
+                        var txt = `${name} had always been fascinated by the stories of Volibear. A creature of legend said to predate even the Freljord itself. He was said to be destructive, wild, and fiercely protective of the land. ${name} could see himself in those qualities. He, too, was wild and destructive. And he, too, was fiercely protective of his home.
+
+But there was one quality that ${name} didn't share with Volibear. Volibear was said to hate civilization and the weakness it brought. ${name}, on the other hand, loved civilization. He loved the conveniences it brought, and the safety it provided. He didn't see the weakness in it, only the strength.
+
+That was why, when he heard that Volibear was planning to attack the nearby city, ${name} knew he had to stop him. He couldn't let Volibear destroy the city and all the people in it. He had to protect them, even if it meant going against the very creature he admired.`; /* The text */
+                        var speed = 1; /* The speed/duration of the effect in milliseconds */
+                        // make the color of the text change
                         function typeWriter() {
                             if (i < txt.length) {
+                                // make the color of the text change
                                 $(".story").append(txt.charAt(i));
                                 i++;
                                 setTimeout(typeWriter, speed);
@@ -185,12 +187,15 @@ He has lost everything, but he still clings to the hope that one day he will be 
                         function endingText() {
                             $(".story").append('<br><br>');
                             $(".story").append('<b>This story was generated with GPT3!</b>');
+                        }
+                        function endingTextTwo() {
                             $(".story").append('<br><br><br>');
-                            $(".story").append('<a class="button1" font-size="25" id="enableMe"href="/champions/udyr">Make your story with Udyr, The Spirit Animal ➤</a>');
+                            $(".story").append('<a class="button1" font-size="25" id="enableMe"href="/champions/Kayn">Make your story with Kayn, The Shadow Reaper ➤</a>');
                         }
 
                         typeWriter();
-                        setTimeout(endingText, 5000);
+                        setTimeout(endingText, 7000);
+                        setTimeout(endingTextTwo, 9000);
                     }
                 });
             </script>
@@ -200,9 +205,9 @@ He has lost everything, but he still clings to the hope that one day he will be 
 
         <div class="column">
             <div class="overlay">
-                Shaco
+                Volibear
             </div>
-            <img class="hoverImages" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shaco_23.jpg"
+            <img class="hoverImages" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg"
                 alt="Snow" style="width:100%">
         </div>
 
@@ -227,6 +232,15 @@ He has lost everything, but he still clings to the hope that one day he will be 
                 filter: drop-shadow(0px 0px 5px #03192C);
                 /* background-color: #03192C; */
             }
+
+            /* Create four equal columns that sits next to each other */
+            /* .column {
+            flex: 10%;
+            max-width: 33%;
+            padding: 5px;
+            max-height: 50%;
+        } */
+
             .column {
                 float: left;
                 width: 38%;
@@ -236,6 +250,9 @@ He has lost everything, but he still clings to the hope that one day he will be 
                 max-height: 50%;
                 margin-left: 4%;
                 margin-top: 2%;
+                /*make the image float on hover*/
+                /* background-color: #000;
+            background-size: 1px; */
                 filter: drop-shadow(3px 3px 3px #03192C);
 
             }
