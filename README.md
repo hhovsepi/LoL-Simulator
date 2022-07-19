@@ -1,5 +1,5 @@
 # League of Legends Story Teller
-## [Link to Deployed Application](https://lol-story-teller.herokuapp.com//)
+## [Link to Deployed Application](https://lol-story-teller.herokuapp.com/)
 
 ## Put Yourself In Your Favorite Champions Story
 
