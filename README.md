@@ -23,7 +23,6 @@ The application's user interface is built upon `React`.
 | [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | Structure of Web Page |
 | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) | Styling of HTML |
 | [JavaScript](https://www.javascript.com/) | Powers the dynamic behavior of web app |
-| [React](https://reactjs.org/) | JavaScript library for building User Interface |
 | [Node.js](https://handlebarsjs.com/) | JS run-time environment that executes JS code outside of a browser |
 ######
 
