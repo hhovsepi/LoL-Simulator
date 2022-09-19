@@ -24,6 +24,8 @@ The application's user interface is built upon `React`.
 | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) | Styling of HTML |
 | [JavaScript](https://www.javascript.com/) | Powers the dynamic behavior of web app |
 | [Node.js](https://handlebarsjs.com/) | JS run-time environment that executes JS code outside of a browser |
+| [Express.js](https://expressjs.com/) | Node.js web application server framework |
+
 ######
 
 
