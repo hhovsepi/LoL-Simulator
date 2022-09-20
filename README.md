@@ -6,8 +6,6 @@
 `League of Legends Story Teller` is based on the popular MMO strategy game League of Legends. The app combines AI with existing champion backstories to craft personalized stories for the user.
 
 This is a full-stack web-based application built upon the `Node.js` environment, relies on `Express` for functionality, and utilizes `GPT-3` as the source for AI generated short stories.
-
-The application's user interface is built upon `React`.
 <br><br>
 
 ## Demo of the Story Teller:
